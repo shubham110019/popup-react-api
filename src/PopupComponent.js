@@ -33,9 +33,9 @@ const PopupComponent = ({ userId }) => {
 
       // Create the popup div
       const popupDiv = document.createElement('div');
-      popupDiv.id = `popid-${popupId}`;
-      popupDiv.className = 'popup';
-      popupDiv.style.display = 'flex';
+      popupDiv.id = `om-${popupId}`;
+      popupDiv.className = 'om-canva-web';
+    //   popupDiv.style.display = 'flex';
 
       // Inject HTML content
       const contentDiv = document.createElement('div');
@@ -57,7 +57,7 @@ const PopupComponent = ({ userId }) => {
       }
 
       // Add close button functionality
-      const closeButton = contentDiv.querySelector('.close-btn');
+      const closeButton = contentDiv.querySelector(`#om-${popupId} .close-btn`);
       if (closeButton) {
         closeButton.addEventListener('click', () => {
           popupDiv.style.display = 'none'; // Hide the popup when close button is clicked
